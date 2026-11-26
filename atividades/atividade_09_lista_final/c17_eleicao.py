@@ -18,7 +18,7 @@ for i in range(5):
         linha.append(v_temp)
     matriz_candidatos.append(linha)
     
-for i in range(6):
+for i in range(30):
     print("Selecione para qual candidato vai o seu voto:\n1. Candidato A\n2. Candidato B\n3. Candidato C\n4. Candidato D\nPressione qualquer outro número para voto nulo.")
     voto = is_int("")
     if voto >= 1 and voto <= 4:
@@ -38,6 +38,10 @@ for i in range(4):
         linha.append(matriz_candidatos[i][0])
         linha.append(matriz_candidatos[i][1])
         vencedor.append(linha)
+
+print("Resultado final:")        
+for i in matriz_candidatos:
+    print(f"{i[0]} --- Votos: {i[1]}")
 
 if voto_maior == 0:
         print("Nenhum candidato recebeu votos válidos.")       

@@ -33,22 +33,34 @@ for i in range(len(matriz_vendedor)-1):
         
 print("Valor das vendas por dia: ", por_dia)
 
-melhor_vendedor = 0
 maior_venda = cada_vendedor[0]
 
 for i in range(len(cada_vendedor)):
     if cada_vendedor[i] > maior_venda:
         maior_venda = cada_vendedor[i]
-        melhor_vendedor = i
-        
-print("Melhor vendedor: ", melhor_vendedor + 1)
+
+melhores_vendedores = []
+for i in range(len(cada_vendedor)):
+    if cada_vendedor[i] == maior_venda:
+        melhores_vendedores.append(i + 1)
+
+if len(melhores_vendedores) > 1:
+    print("Empate entre os melhores vendedores: ", melhores_vendedores)
+else:
+    print("Melhor vendedor: ", melhores_vendedores[0])
 
 melhor_dia = por_dia[0]
-melhor_dia_indice = 0
 
 for i in range(len(por_dia)):
     if por_dia[i] > melhor_dia:
         melhor_dia = por_dia[i]
-        melhor_dia_indice = i
-        
-print("Melhor dia de vendas: ", melhor_dia_indice + 1)
+
+melhores_dias = []
+for i in range(len(por_dia)):
+    if por_dia[i] == melhor_dia:
+        melhores_dias.append(i + 1)
+
+if len(melhores_dias) > 1:
+    print("Empate entre os melhores dias de vendas: ", melhores_dias)
+else:
+    print("Melhor dia de vendas: ", melhores_dias[0])
